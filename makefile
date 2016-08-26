@@ -12,7 +12,7 @@ pdf/%.pdf: tex/%.tex .that.tickles
 	@pdflatex -interaction=batchmode tex/$*.tex > /dev/null
 	@pdflatex -interaction=batchmode tex/$*.tex > /dev/null
 	@mv $*.pdf pdf/
-	@rm -f $*.aux $*.log $*.toc $*.out $*.blg $*.bbl texput.log
+	@rm -f $*.aux $*.log $*.toc $*.out $*.blg $*.bbl $*.nav $*.snm texput.log
 
 .that.tickles: tickle.me
 	@touch .that.tickles
